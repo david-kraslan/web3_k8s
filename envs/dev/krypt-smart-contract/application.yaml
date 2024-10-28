@@ -1,0 +1,43 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: krypt-smart-contract=376801182676.dkr.ecr.eu-north-1.amazonaws.com/web3/krypt-smart-contract
+    argocd-image-updater.argoproj.io/krypt-smart-contract.update-strategy: semver
+    argocd-image-updater.argoproj.io/write-back-method: git
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  name: krypt-smart-contract-dev
+  namespace: argo
+spec:
+  destination:
+    namespace: dev
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      parameters:
+      - name: image.repository
+        value: 376801182676.dkr.ecr.eu-north-1.amazonaws.com/web3/krypt-smart-contract
+      - name: service.port
+        value: '8080'
+      - name: livenessProbe.httpGet.path
+        value: /healthz
+      - name: readinessProbe.httpGet.path
+        value: /healthz
+      - name: image.tag
+        value: 0.1.0
+    path: helm-charts/krypt-webapp
+    repoURL: https://github.com/david-kraslan/web3_k8s.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      allowEmpty: false
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - Validate=true
+    - CreateNamespace=true
+    - PrunePropagationPolicy=foreground
+    - PruneLast=true
