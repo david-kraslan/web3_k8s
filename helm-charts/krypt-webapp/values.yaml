@@ -64,7 +64,7 @@ ingress:
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: a659f76114f4a4145a177f52c52e268b-db34f6a0cce9c30e.elb.eu-north-1.amazonaws.com
+    - host: a24f241ecf7704d5ea574c12c2faec67-1b568509efa3809d.elb.eu-north-1.amazonaws.com
       paths:
         - path: /krypt-webapp
           pathType: ImplementationSpecific
