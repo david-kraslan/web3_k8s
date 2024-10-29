@@ -66,7 +66,7 @@ ingress:
   hosts:
     - host: a24f241ecf7704d5ea574c12c2faec67-1b568509efa3809d.elb.eu-north-1.amazonaws.com
       paths:
-        - path: /krypt-webapp
+        - path: /
           pathType: ImplementationSpecific
   tls: []
   #  - secretName: chart-example-tls
