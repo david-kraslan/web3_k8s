@@ -21,7 +21,7 @@ spec:
       - name: image.repository
         value: 376801182676.dkr.ecr.eu-north-1.amazonaws.com/web3/krypt-smart-contract
       - name: service.port
-        value: '8080'
+        value: '8545'
       - name: livenessProbe.httpGet.path
         value: /healthz
       - name: readinessProbe.httpGet.path

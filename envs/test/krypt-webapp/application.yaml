@@ -21,7 +21,7 @@ spec:
       - name: image.repository
         value: 376801182676.dkr.ecr.eu-north-1.amazonaws.com/web3/krypt-webapp
       - name: service.port
-        value: '8080'
+        value: '3000'
       - name: livenessProbe.httpGet.path
         value: /healthz
       - name: readinessProbe.httpGet.path
