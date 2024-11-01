@@ -28,6 +28,8 @@ spec:
         value: /healthz
       - name: image.tag
         value: 0.1.0
+      - name: ingress.ingressClassName
+        value: nginx-dev
     path: helm-charts/krypt-smart-contract
     repoURL: https://github.com/david-kraslan/web3_k8s.git
     targetRevision: main
