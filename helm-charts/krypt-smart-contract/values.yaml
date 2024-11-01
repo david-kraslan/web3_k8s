@@ -61,14 +61,14 @@ ingress:
     enabled: true
     className: nginx-dev
     annotations:
-      kubernetes.io/ingress.class: "nginx-dev"
+      #kubernetes.io/ingress.class: "nginx-dev"
     # kubernetes.io/tls-acme: "true"
-    hosts:
-      - host: a3b1cd877ad654902b36582d098fe545-96ba5bdb93b18266.elb.eu-north-1.amazonaws.com
-        paths:
-          - path: /smart-contract
-            pathType: ImplementationSpecific
-    tls: []
+    #hosts:
+      #- host: a3b1cd877ad654902b36582d098fe545-96ba5bdb93b18266.elb.eu-north-1.amazonaws.com
+        #paths:
+          #- path: /smart-contract
+            #pathType: ImplementationSpecific
+    #tls: []
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
