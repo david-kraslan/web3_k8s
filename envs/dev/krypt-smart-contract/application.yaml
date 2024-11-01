@@ -28,7 +28,7 @@ spec:
         value: /healthz
       - name: image.tag
         value: 0.1.0
-      - name: ingress.ingressClassName
+      - name: ingress.ClassName
         value: nginx-dev
       - name: ingress.hostname
         value: a2cc07b7394974b919073e1158d5d8f9-56ca2977c5375e56.elb.eu-north-1.amazonaws.com #change
