@@ -4,6 +4,7 @@ metadata:
   name: {{ include "krypt-webapp.fullname" . }}
   namespace: {{ .Release.Namespace }}
 spec:
+  ingressClassName: nginx-{{ .Release.Namespace }}
   rules:
     - host: {{ .Values.ingress.hostname | quote }}
       http:
