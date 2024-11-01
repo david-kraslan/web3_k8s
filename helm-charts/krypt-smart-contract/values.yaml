@@ -61,8 +61,8 @@ ingress:
   dev:
     enabled: true
     className: nginx-dev
-    annotations: {}
-    # kubernetes.io/ingress.class: nginx
+    annotations:
+      kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
     hosts:
       - host: a0180155f2ae644658422a3bd7a12c97-a8746ede993e5e78.elb.eu-north-1.amazonaws.com
@@ -77,8 +77,8 @@ ingress:
   test:
     enabled: true
     className: nginx-test
-    annotations: {}
-    # kubernetes.io/ingress.class: nginx
+    annotations: 
+      kubernetes.io/ingress.class: "nginx"
     # kubernetes.io/tls-acme: "true"
     hosts:
       - host: a671e02e24c38409c9a97359e4bd916e-768bcaf9576a5a18.elb.eu-north-1.amazonaws.com
