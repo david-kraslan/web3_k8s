@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ include "krypt-webapp.fullname" . }}
+  name: {{ include "krypt-smart-contract.fullname" . }}
   namespace: {{ .Release.Namespace }}
 spec:
   ingressClassName: nginx-{{ .Release.Namespace }}
@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ include "krypt-webapp.fullname" . }}
+                name: {{ include "krypt-smart-contract.fullname" . }}
                 port:
                   number: {{ .Values.service.port }}
