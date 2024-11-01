@@ -31,7 +31,7 @@ spec:
       - name: ingress.ingressClassName
         value: nginx-test
       - name: ingress.hostname
-        value: a2cc07b7394974b919073e1158d5d8f9-56ca2977c5375e56.elb.eu-north-1.amazonaws.com #change
+        value: a554b80d907e04255b946cd30330572d-05cf6cb03d296159.elb.eu-north-1.amazonaws.com #change
     path: helm-charts/krypt-smart-contract
     repoURL: https://github.com/david-kraslan/web3_k8s.git
     targetRevision: main
