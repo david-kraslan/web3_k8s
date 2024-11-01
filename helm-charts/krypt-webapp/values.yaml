@@ -74,22 +74,6 @@ ingress:
   #    hosts:
   #      - chart-example.local
 
-  test:
-    enabled: true
-    className: nginx-test
-    annotations:
-      kubernetes.io/ingress.class: "nginx"
-    # kubernetes.io/tls-acme: "true"
-    hosts:
-      - host: a671e02e24c38409c9a97359e4bd916e-768bcaf9576a5a18.elb.eu-north-1.amazonaws.com
-        paths:
-          - path: /
-            pathType: ImplementationSpecific
-    tls: []
-  #  - secretName: chart-example-tls
-  #    hosts:
-  #      - chart-example.local
-
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
   # choice for the user. This also increases chances charts run on environments with little
