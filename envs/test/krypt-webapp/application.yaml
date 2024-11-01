@@ -30,6 +30,8 @@ spec:
         value: 0.1.0
       - name: ingress.ingressClassName
         value: nginx-test
+      - name: ingress.hostname
+        value: my-service.dev.example.com #change
     path: helm-charts/krypt-webapp
     repoURL: https://github.com/david-kraslan/web3_k8s.git
     targetRevision: main
